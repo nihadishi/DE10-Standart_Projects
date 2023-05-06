@@ -18,25 +18,25 @@ always @(posedge clk) begin
     end
 
     case (count)
-        4'h0: begin hex0 <= 7'b0100001;
-						  hex1 <= 7'b0000110;
-						  hex2 <= 7'b1111001; 
-						  hex3 <= 7'b1000000; 
-				  end
-		 4'h1: begin  hex1 <= 7'b0100001;
+        4'h0: begin hex3 <= 7'b0100001;
 						  hex2 <= 7'b0000110;
-						  hex3 <= 7'b1111001; 
+						  hex1 <= 7'b1111001; 
 						  hex0 <= 7'b1000000; 
 				  end
-		 4'h2: begin  hex2 <= 7'b0100001;
-						  hex3 <= 7'b0000110;
+		 4'h1: begin  hex2 <= 7'b0100001;
+						  hex1 <= 7'b0000110;
 						  hex0 <= 7'b1111001; 
-						  hex1 <= 7'b1000000; 
+						  hex3 <= 7'b1000000; 
 				  end
-		 4'h3: begin  hex3 <= 7'b0100001;
+		 4'h2: begin  hex1 <= 7'b0100001;
 						  hex0 <= 7'b0000110;
-						  hex1 <= 7'b1111001; 
+						  hex3 <= 7'b1111001; 
 						  hex2 <= 7'b1000000; 
+				  end
+		 4'h3: begin  hex0 <= 7'b0100001;
+						  hex3 <= 7'b0000110;
+						  hex2 <= 7'b1111001; 
+						  hex1 <= 7'b1000000; 
 				  end
         
     endcase
