@@ -1,4 +1,4 @@
-module sdf2_lab4(
+module 8bit-counter-decimal(//sdf2_lab4
     input wire clk,
     input wire reset,
     input wire enable,
